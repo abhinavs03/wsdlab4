@@ -1,0 +1,14 @@
+<!ELEMENT MovieTicketing (Movie+, Theater+, Showtime+)>
+<!ELEMENT Movie (Title, Genre, Duration, Rating)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Genre (#PCDATA)>
+<!ELEMENT Duration (#PCDATA)>
+<!ELEMENT Rating (#PCDATA)>
+<!ELEMENT Theater (Name, Location, Capacity)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT Capacity (#PCDATA)>
+<!ELEMENT Showtime (MovieTitle, TheaterName, Time)>
+<!ELEMENT MovieTitle (#PCDATA)>
+<!ELEMENT TheaterName (#PCDATA)>
+<!ELEMENT Time (#PCDATA)>

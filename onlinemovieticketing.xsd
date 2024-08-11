@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified" 
+           targetNamespace="http://www.example.com/provider" 
+           xmlns:movie="http://www.example.com/provider">
+
+    <!-- Define a pattern for phone numbers -->
+    <xs:simpleType name="phoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Define a pattern for email addresses -->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Define a restriction for price -->
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:maxExclusive value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Define Movie complex type -->
+    <xs:complexType name="movieType">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Genre" type="xs:string"/>
+            <xs:element name="Duration" type="movie:priceType"/> <!-- Duration is using the priceType restriction -->
+            <xs:element name="Rating" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define Theater complex type -->
+    <xs:complexType name="theaterType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Location" type="xs:string"/>
+            <xs:element name="Capacity" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define Showtime complex type -->
+    <xs:complexType name="showtimeType">
+        <xs:sequence>
+            <xs:element name="MovieTitle" type="xs:string"/>
+            <xs:element name="TheaterName" type="xs:string"/>
+            <xs:element name="Time" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define MovieTicketing root element -->
+    <xs:complexType name="movieTicketingType">
+        <xs:sequence>
+            <xs:element name="Movie" type="movie:movieType" maxOccurs="unbounded"/>
+            <xs:element name="Theater" type="movie:theaterType" maxOccurs="unbounded"/>
+            <xs:element name="Showtime" type="movie:showtimeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="MovieTicketing" type="movie:movieTicketingType"/>
+</xs:schema>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="onlinemovieticketing.xsl" type="text/xsl" ?>
+<MovieTicketing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.example.com/onlinemovieticketing" xsi:schemaLocation="http://www.example.com/onlinemovieticketing onlinemovieticketing.xsd">
+
+    <Movie>
+        <Title>Inception</Title>
+        <Genre>Sci-Fi</Genre>
+        <Duration>148</Duration>
+        <Rating>4.8</Rating>
+    </Movie>
+    <Movie>
+        <Title>The Godfather</Title>
+        <Genre>Crime</Genre>
+        <Duration>175</Duration>
+        <Rating>4.9</Rating>
+    </Movie>
+    <Movie>
+        <Title>The Dark Knight</Title>
+        <Genre>Action</Genre>
+        <Duration>152</Duration>
+        <Rating>4.7</Rating>
+    </Movie>
+    <Movie>
+        <Title>La La Land</Title>
+        <Genre>Musical</Genre>
+        <Duration>128</Duration>
+        <Rating>4.6</Rating>
+    </Movie>
+    <Movie>
+        <Title>Parasite</Title>
+        <Genre>Thriller</Genre>
+        <Duration>132</Duration>
+        <Rating>4.8</Rating>
+    </Movie>
+    <Movie>
+        <Title>Interstellar</Title>
+        <Genre>Sci-Fi</Genre>
+        <Duration>169</Duration>
+        <Rating>4.7</Rating>
+    </Movie>
+    <Movie>
+        <Title>Pulp Fiction</Title>
+        <Genre>Crime</Genre>
+        <Duration>154</Duration>
+        <Rating>4.9</Rating>
+    </Movie>
+    <Movie>
+        <Title>Whiplash</Title>
+        <Genre>Drama</Genre>
+        <Duration>106</Duration>
+        <Rating>4.8</Rating>
+    </Movie>
+
+    <Theater>
+        <Name>AMC Empire 25</Name>
+        <Location>234 W 42nd St, New York, NY, 10036</Location>
+        <Capacity>500</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Odeon Leicester Square</Name>
+        <Location>24-26 Leicester Square, London, WC2H 7JY</Location>
+        <Capacity>800</Capacity>
+    </Theater>
+    <Theater>
+        <Name>ArcLight Hollywood</Name>
+        <Location>6360 Sunset Blvd, Los Angeles, CA, 90028</Location>
+        <Capacity>450</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Vue Cinema</Name>
+        <Location>O2 Arena, Peninsula Square, London, SE10 0DX</Location>
+        <Capacity>600</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Palace Cinema Como</Name>
+        <Location>Level 1/299 Toorak Rd, South Yarra VIC 3141, Australia</Location>
+        <Capacity>350</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Grand Rex</Name>
+        <Location>1 Boulevard Poissonnière, 75002 Paris, France</Location>
+        <Capacity>2700</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Cinema City</Name>
+        <Location>Al. Jerozolimskie 44, 00-024 Warsaw, Poland</Location>
+        <Capacity>500</Capacity>
+    </Theater>
+    <Theater>
+        <Name>Shinjuku Piccadilly</Name>
+        <Location>3-15-15 Shinjuku, Shinjuku-ku, Tokyo 160-0022, Japan</Location>
+        <Capacity>600</Capacity>
+    </Theater>
+
+    <Showtime>
+        <MovieTitle>Inception</MovieTitle>
+        <TheaterName>AMC Empire 25</TheaterName>
+        <Time>10:00 AM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>The Godfather</MovieTitle>
+        <TheaterName>Odeon Leicester Square</TheaterName>
+        <Time>12:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>The Dark Knight</MovieTitle>
+        <TheaterName>ArcLight Hollywood</TheaterName>
+        <Time>2:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>La La Land</MovieTitle>
+        <TheaterName>Vue Cinema</TheaterName>
+        <Time>4:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>Parasite</MovieTitle>
+        <TheaterName>Palace Cinema Como</TheaterName>
+        <Time>6:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>Interstellar</MovieTitle>
+        <TheaterName>Grand Rex</TheaterName>
+        <Time>8:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>Pulp Fiction</MovieTitle>
+        <TheaterName>Cinema City</TheaterName>
+        <Time>10:00 PM</Time>
+    </Showtime>
+    <Showtime>
+        <MovieTitle>Whiplash</MovieTitle>
+        <TheaterName>Shinjuku Piccadilly</TheaterName>
+        <Time>11:59 PM</Time>
+    </Showtime>
+
+</MovieTicketing>
